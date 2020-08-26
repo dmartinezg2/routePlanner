@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Simple Map</title>
+    <meta name="viewport" content="initial-scale=1.0">
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <style>
+      /* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+      #map {
+        height: 100%;
+      }
+      /* Optional: Makes the sample page fill the window. */
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+      #floating-panel {
+        position: absolute;
+        top: 10px;
+        left: 25%;
+        z-index: 5;
+        background-color: #fff;
+        padding: 5px;
+        border: 1px solid #999;
+        text-align: center;
+        font-family: 'Roboto','sans-serif';
+        line-height: 30px;
+        padding-left: 10px;
+      }
+
+      .buttons{
+                
+      }
+    </style>
+  </head>
+  <body>
+      <nav class="navbar navbar-dark bg-primary">
+          <button class="btn btn-primary" onClick="addMarker()">Agregar Marcador</button>
+          <button class="btn btn-primary" onClick="calcularRuta()">Calcular Ruta</button>
+          <button  class="btn btn-primary"  onClick="clearMarkers()">Borrar Todo</button>
+          <button class="btn btn-primary" onClick="agregarConductor()"> Agregar Posición del Conductor</button>
+          <button class="btn btn-primary" onClick="calcularPDP()">Calcular PDP</button>
+      </nav>
+      
+    <div id="map" style="width: 100vw; height: 90vh;">
+        
+    
+    </div>
+    <script src="hackathon_raw.js"></script>
+    <!--initMap must be a function inside the main js file-->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAQ2wSiH5-0oEREOYgw2VRjEkHSHV_yRgA&callback=initMap"
+    async defer></script>
+  </body>
+</html>
